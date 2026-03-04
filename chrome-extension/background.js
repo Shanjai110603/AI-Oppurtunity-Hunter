@@ -1,7 +1,7 @@
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === "process_data") {
-        // We will send this data to our Next.js backend for AI evaluation
-        const backendUrl = "http://localhost:3000/api/analyze";
+        // We will send this data to our Express backend for AI evaluation
+        const backendUrl = "http://localhost:5000/api/analyze-opportunity";
 
         fetch(backendUrl, {
             method: 'POST',
