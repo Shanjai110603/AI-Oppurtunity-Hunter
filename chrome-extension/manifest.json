@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "AI Opportunity Hunter",
+  "version": "1.0",
+  "description": "Find automation opportunities and potential clients out of thin air.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["*://*/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
